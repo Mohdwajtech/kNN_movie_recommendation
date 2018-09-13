@@ -2,6 +2,7 @@
 kNN  as a kind of prediction for movies
 
 Data Source
+
 movie-train.csv
 
 movie-test.csv
@@ -11,10 +12,12 @@ These have been taken (and modified) from: http://kevinmolloy.info/teaching/cs50
 This is a small subset of the original movielens dataset. https://grouplens.org/datasets/movielens/
 
 Objective
+
 To use kNN as a kind of a recommendation/prediction for movies.
 
 Datasets
-As discussed in class, you will build your model using the training data. To test your model, you will calculate predictions for each entry in the test set (a userID/movieID pair), and since you know the real rating, you can compute the difference between the two, and determine how well your method performs, as an additional exercise. In this exercise we only consider if a user has seen or not seen -- irrespective of the rating.
+
+We will build your model using the training data. To test our model, we will calculate predictions for each entry in the test set (a userID/movieID pair), and since we know the real rating, we can compute the difference between the two, and determine how well our method performs In this exercise we only consider if a user has seen or not seen -- irrespective of the rating.
 
 In other words if a userId, movieId, rating line exists, then the user has seen that movie.
 
@@ -35,7 +38,6 @@ M×N binary matrix indicating seen/not-seen.
 Test set:
 L test cases with  (x,y)  pairs.  x  is N-dimensional binary vector with missing  yth  entry - which we want to predict.
 
-Exercise 1 :: Write a function to compute euclidean distance between two users for all entries except the missing  yth  entry.
 
 We will use KNN to find the K nearest neighbour users (users with similar taste) to  x , and make predictions based on their entries for the movie  y .
 
